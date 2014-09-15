@@ -10,18 +10,23 @@
 		44AD19F619C6E30E00C64713 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD19F519C6E30E00C64713 /* Foundation.framework */; };
 		44AD19F819C6E30E00C64713 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD19F719C6E30E00C64713 /* CoreGraphics.framework */; };
 		44AD19FA19C6E30E00C64713 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD19F919C6E30E00C64713 /* UIKit.framework */; };
-		44AD1A0019C6E30E00C64713 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44AD19FE19C6E30E00C64713 /* InfoPlist.strings */; };
-		44AD1A0219C6E30E00C64713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1A0119C6E30E00C64713 /* main.m */; };
-		44AD1A0619C6E30E00C64713 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1A0519C6E30E00C64713 /* AppDelegate.m */; };
-		44AD1A0919C6E30E00C64713 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1A0719C6E30E00C64713 /* Main_iPhone.storyboard */; };
-		44AD1A0C19C6E30E00C64713 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1A0A19C6E30E00C64713 /* Main_iPad.storyboard */; };
-		44AD1A0F19C6E30E00C64713 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1A0E19C6E30E00C64713 /* ViewController.m */; };
-		44AD1A1119C6E30E00C64713 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1A1019C6E30E00C64713 /* Images.xcassets */; };
 		44AD1A1819C6E30F00C64713 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD1A1719C6E30F00C64713 /* XCTest.framework */; };
 		44AD1A1919C6E30F00C64713 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD19F519C6E30E00C64713 /* Foundation.framework */; };
 		44AD1A1A19C6E30F00C64713 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD19F919C6E30E00C64713 /* UIKit.framework */; };
-		44AD1A2219C6E30F00C64713 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1A2019C6E30F00C64713 /* InfoPlist.strings */; };
-		44AD1A2419C6E30F00C64713 /* HeatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1A2319C6E30F00C64713 /* HeatMapTests.m */; };
+		44AD1A3719C6E96400C64713 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD1A3619C6E96400C64713 /* MapKit.framework */; };
+		44AD1A8D19C6FAE100C64713 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1A8919C6FAE100C64713 /* InfoPlist.strings */; };
+		44AD1A8E19C6FAE100C64713 /* HeatMapTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1A8B19C6FAE100C64713 /* HeatMapTests-Info.plist */; };
+		44AD1B1119C6FEE300C64713 /* HeatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1B1019C6FEE300C64713 /* HeatMapTests.m */; };
+		44AD1B2819C6FF7600C64713 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1B1519C6FF7600C64713 /* AppDelegate.m */; };
+		44AD1B2919C6FF7600C64713 /* redDot_06.png in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1B1719C6FF7600C64713 /* redDot_06.png */; };
+		44AD1B2A19C6FF7600C64713 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1B1819C6FF7600C64713 /* Main_iPad.storyboard */; };
+		44AD1B2B19C6FF7600C64713 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1B1A19C6FF7600C64713 /* Main_iPhone.storyboard */; };
+		44AD1B2C19C6FF7600C64713 /* HeatMapImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1B1E19C6FF7600C64713 /* HeatMapImage.m */; };
+		44AD1B2D19C6FF7600C64713 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1B1F19C6FF7600C64713 /* InfoPlist.strings */; };
+		44AD1B2E19C6FF7600C64713 /* HeatMap-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1B2119C6FF7600C64713 /* HeatMap-Info.plist */; };
+		44AD1B2F19C6FF7600C64713 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1B2319C6FF7600C64713 /* Images.xcassets */; };
+		44AD1B3019C6FF7600C64713 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1B2419C6FF7600C64713 /* main.m */; };
+		44AD1B3119C6FF7600C64713 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1B2719C6FF7600C64713 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,22 +44,26 @@
 		44AD19F519C6E30E00C64713 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44AD19F719C6E30E00C64713 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		44AD19F919C6E30E00C64713 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		44AD19FD19C6E30E00C64713 /* HeatMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeatMap-Info.plist"; sourceTree = "<group>"; };
-		44AD19FF19C6E30E00C64713 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		44AD1A0119C6E30E00C64713 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		44AD1A0319C6E30E00C64713 /* HeatMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeatMap-Prefix.pch"; sourceTree = "<group>"; };
-		44AD1A0419C6E30E00C64713 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		44AD1A0519C6E30E00C64713 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		44AD1A0819C6E30E00C64713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		44AD1A0B19C6E30E00C64713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		44AD1A0D19C6E30E00C64713 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		44AD1A0E19C6E30E00C64713 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		44AD1A1019C6E30E00C64713 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		44AD1A1619C6E30F00C64713 /* HeatMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HeatMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AD1A1719C6E30F00C64713 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		44AD1A1F19C6E30F00C64713 /* HeatMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HeatMapTests-Info.plist"; sourceTree = "<group>"; };
-		44AD1A2119C6E30F00C64713 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		44AD1A2319C6E30F00C64713 /* HeatMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeatMapTests.m; sourceTree = "<group>"; };
+		44AD1A3619C6E96400C64713 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		44AD1A8A19C6FAE100C64713 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44AD1A8B19C6FAE100C64713 /* HeatMapTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HeatMapTests-Info.plist"; sourceTree = "<group>"; };
+		44AD1B1019C6FEE300C64713 /* HeatMapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatMapTests.m; sourceTree = "<group>"; };
+		44AD1B1419C6FF7600C64713 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = HeatMap/AppDelegate.h; sourceTree = SOURCE_ROOT; };
+		44AD1B1519C6FF7600C64713 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = HeatMap/AppDelegate.m; sourceTree = SOURCE_ROOT; };
+		44AD1B1719C6FF7600C64713 /* redDot_06.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redDot_06.png; sourceTree = "<group>"; };
+		44AD1B1919C6FF7600C64713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		44AD1B1B19C6FF7600C64713 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		44AD1B1D19C6FF7600C64713 /* HeatMapImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatMapImage.h; sourceTree = "<group>"; };
+		44AD1B1E19C6FF7600C64713 /* HeatMapImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatMapImage.m; sourceTree = "<group>"; };
+		44AD1B2019C6FF7600C64713 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		44AD1B2119C6FF7600C64713 /* HeatMap-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HeatMap-Info.plist"; path = "../HeatMap-Info.plist"; sourceTree = "<group>"; };
+		44AD1B2219C6FF7600C64713 /* HeatMap-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "HeatMap-Prefix.pch"; path = "../HeatMap-Prefix.pch"; sourceTree = "<group>"; };
+		44AD1B2319C6FF7600C64713 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ../Images.xcassets; sourceTree = "<group>"; };
+		44AD1B2419C6FF7600C64713 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../main.m; sourceTree = "<group>"; };
+		44AD1B2619C6FF7600C64713 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		44AD1B2719C6FF7600C64713 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44AD1A3719C6E96400C64713 /* MapKit.framework in Frameworks */,
 				44AD19F819C6E30E00C64713 /* CoreGraphics.framework in Frameworks */,
 				44AD19FA19C6E30E00C64713 /* UIKit.framework in Frameworks */,
 				44AD19F619C6E30E00C64713 /* Foundation.framework in Frameworks */,
@@ -84,8 +94,8 @@
 		44AD19E919C6E30E00C64713 = {
 			isa = PBXGroup;
 			children = (
-				44AD19FB19C6E30E00C64713 /* HeatMap */,
-				44AD1A1D19C6E30F00C64713 /* HeatMapTests */,
+				44AD1B1219C6FF7600C64713 /* HeatMap */,
+				44AD1A8819C6FAE100C64713 /* HeatMapTests */,
 				44AD19F419C6E30E00C64713 /* Frameworks */,
 				44AD19F319C6E30E00C64713 /* Products */,
 			);
@@ -103,6 +113,7 @@
 		44AD19F419C6E30E00C64713 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				44AD1A3619C6E96400C64713 /* MapKit.framework */,
 				44AD19F519C6E30E00C64713 /* Foundation.framework */,
 				44AD19F719C6E30E00C64713 /* CoreGraphics.framework */,
 				44AD19F919C6E30E00C64713 /* UIKit.framework */,
@@ -111,48 +122,67 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		44AD19FB19C6E30E00C64713 /* HeatMap */ = {
+		44AD1A8819C6FAE100C64713 /* HeatMapTests */ = {
 			isa = PBXGroup;
 			children = (
-				44AD1A0419C6E30E00C64713 /* AppDelegate.h */,
-				44AD1A0519C6E30E00C64713 /* AppDelegate.m */,
-				44AD1A0719C6E30E00C64713 /* Main_iPhone.storyboard */,
-				44AD1A0A19C6E30E00C64713 /* Main_iPad.storyboard */,
-				44AD1A0D19C6E30E00C64713 /* ViewController.h */,
-				44AD1A0E19C6E30E00C64713 /* ViewController.m */,
-				44AD1A1019C6E30E00C64713 /* Images.xcassets */,
-				44AD19FC19C6E30E00C64713 /* Supporting Files */,
-			);
-			path = HeatMap;
-			sourceTree = "<group>";
-		};
-		44AD19FC19C6E30E00C64713 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				44AD19FD19C6E30E00C64713 /* HeatMap-Info.plist */,
-				44AD19FE19C6E30E00C64713 /* InfoPlist.strings */,
-				44AD1A0119C6E30E00C64713 /* main.m */,
-				44AD1A0319C6E30E00C64713 /* HeatMap-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		44AD1A1D19C6E30F00C64713 /* HeatMapTests */ = {
-			isa = PBXGroup;
-			children = (
-				44AD1A2319C6E30F00C64713 /* HeatMapTests.m */,
-				44AD1A1E19C6E30F00C64713 /* Supporting Files */,
+				44AD1A8919C6FAE100C64713 /* InfoPlist.strings */,
+				44AD1A8B19C6FAE100C64713 /* HeatMapTests-Info.plist */,
+				44AD1B1019C6FEE300C64713 /* HeatMapTests.m */,
 			);
 			path = HeatMapTests;
 			sourceTree = "<group>";
 		};
-		44AD1A1E19C6E30F00C64713 /* Supporting Files */ = {
+		44AD1B1219C6FF7600C64713 /* HeatMap */ = {
 			isa = PBXGroup;
 			children = (
-				44AD1A1F19C6E30F00C64713 /* HeatMapTests-Info.plist */,
-				44AD1A2019C6E30F00C64713 /* InfoPlist.strings */,
+				44AD1B1619C6FF7600C64713 /* Assets */,
+				44AD1B1C19C6FF7600C64713 /* Components */,
+				44AD1B2519C6FF7600C64713 /* ViewControllers */,
+				44AD1B1319C6FF7600C64713 /* AppDelegate */,
 			);
-			name = "Supporting Files";
+			path = HeatMap;
+			sourceTree = "<group>";
+		};
+		44AD1B1319C6FF7600C64713 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				44AD1B1F19C6FF7600C64713 /* InfoPlist.strings */,
+				44AD1B2119C6FF7600C64713 /* HeatMap-Info.plist */,
+				44AD1B2219C6FF7600C64713 /* HeatMap-Prefix.pch */,
+				44AD1B2319C6FF7600C64713 /* Images.xcassets */,
+				44AD1B2419C6FF7600C64713 /* main.m */,
+				44AD1B1819C6FF7600C64713 /* Main_iPad.storyboard */,
+				44AD1B1A19C6FF7600C64713 /* Main_iPhone.storyboard */,
+				44AD1B1419C6FF7600C64713 /* AppDelegate.h */,
+				44AD1B1519C6FF7600C64713 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		44AD1B1619C6FF7600C64713 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				44AD1B1719C6FF7600C64713 /* redDot_06.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		44AD1B1C19C6FF7600C64713 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				44AD1B1D19C6FF7600C64713 /* HeatMapImage.h */,
+				44AD1B1E19C6FF7600C64713 /* HeatMapImage.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		44AD1B2519C6FF7600C64713 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				44AD1B2619C6FF7600C64713 /* ViewController.h */,
+				44AD1B2719C6FF7600C64713 /* ViewController.m */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,10 +261,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44AD1A0C19C6E30E00C64713 /* Main_iPad.storyboard in Resources */,
-				44AD1A1119C6E30E00C64713 /* Images.xcassets in Resources */,
-				44AD1A0919C6E30E00C64713 /* Main_iPhone.storyboard in Resources */,
-				44AD1A0019C6E30E00C64713 /* InfoPlist.strings in Resources */,
+				44AD1A8E19C6FAE100C64713 /* HeatMapTests-Info.plist in Resources */,
+				44AD1B2F19C6FF7600C64713 /* Images.xcassets in Resources */,
+				44AD1B2D19C6FF7600C64713 /* InfoPlist.strings in Resources */,
+				44AD1B2A19C6FF7600C64713 /* Main_iPad.storyboard in Resources */,
+				44AD1B2E19C6FF7600C64713 /* HeatMap-Info.plist in Resources */,
+				44AD1B2B19C6FF7600C64713 /* Main_iPhone.storyboard in Resources */,
+				44AD1A8D19C6FAE100C64713 /* InfoPlist.strings in Resources */,
+				44AD1B2919C6FF7600C64713 /* redDot_06.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +276,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44AD1A2219C6E30F00C64713 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +286,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44AD1A0F19C6E30E00C64713 /* ViewController.m in Sources */,
-				44AD1A0619C6E30E00C64713 /* AppDelegate.m in Sources */,
-				44AD1A0219C6E30E00C64713 /* main.m in Sources */,
+				44AD1B2C19C6FF7600C64713 /* HeatMapImage.m in Sources */,
+				44AD1B3019C6FF7600C64713 /* main.m in Sources */,
+				44AD1B3119C6FF7600C64713 /* ViewController.m in Sources */,
+				44AD1B2819C6FF7600C64713 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44AD1A2419C6E30F00C64713 /* HeatMapTests.m in Sources */,
+				44AD1B1119C6FEE300C64713 /* HeatMapTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,36 +312,39 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		44AD19FE19C6E30E00C64713 /* InfoPlist.strings */ = {
+		44AD1A8919C6FAE100C64713 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				44AD19FF19C6E30E00C64713 /* en */,
+				44AD1A8A19C6FAE100C64713 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		44AD1A0719C6E30E00C64713 /* Main_iPhone.storyboard */ = {
+		44AD1B1819C6FF7600C64713 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				44AD1A0819C6E30E00C64713 /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		44AD1A0A19C6E30E00C64713 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44AD1A0B19C6E30E00C64713 /* Base */,
+				44AD1B1919C6FF7600C64713 /* Base */,
 			);
 			name = Main_iPad.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
-		44AD1A2019C6E30F00C64713 /* InfoPlist.strings */ = {
+		44AD1B1A19C6FF7600C64713 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				44AD1A2119C6E30F00C64713 /* en */,
+				44AD1B1B19C6FF7600C64713 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		44AD1B1F19C6FF7600C64713 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44AD1B2019C6FF7600C64713 /* en */,
 			);
 			name = InfoPlist.strings;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -392,6 +429,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeatMap/HeatMap-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "HeatMap/HeatMap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -405,6 +443,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HeatMap/HeatMap-Prefix.pch";
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				INFOPLIST_FILE = "HeatMap/HeatMap-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
