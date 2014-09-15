@@ -1,6 +1,6 @@
 //
 //  HeatMapTests.m
-//  HeatMap
+//  HeatMapTests
 //
 //  Created by Katerina Nerush on 15/09/2014.
 //  Copyright (c) 2014 Katerina Nerush. All rights reserved.
