@@ -21,12 +21,10 @@
     if (self) {
         self.frame = initFrame;
         
-        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-        
-        [self setResolution:initFrame.size];
-        [self setUseStencil:true];
-        [self setRadius:0.05];//0.02
-        [self setGamma:2.5];//1.0
+        self.resolution =  initFrame.size;
+        self.useStencil = YES;
+        self.radius = 0.05;
+        self.gamma = 2.5;
     }
     
     return self;
@@ -37,15 +35,85 @@
     self = [super initWithCoder:decoder];
     
     if (self){
-        [self setResolution:CGSizeMake(400, 600)];
-        [self setUseStencil:true];
-        [self setRadius:0.02];
-        [self setGamma:1.0];
+        self.resolution = CGSizeMake(400, 600);
+        self.radius = 0.02;
+        self.gamma = 1.0;
     }
 
     return self;
 }
 
+
+#pragma mark - public methods
+
+-(void)rerenderHeatmap:(NSArray *)pointsArray
+{
+    _pointsArray = pointsArray;
+
+    CIImage *inputImage;
+
+    if (self.useStencil) {
+        inputImage = [[CIImage alloc] initWithImage:[self drawHeightMapUsingStencil]];
+    }
+    else {
+        inputImage = [[CIImage alloc] initWithImage:[self drawHeightMapUsingGradients]];
+    }
+
+    CIFilter *cubeHeatmapLookupFilter = [CIFilter filterWithName:@"CIColorCube"];
+
+    int dimension = 4;  // Must be power of 2, max of 128 (max of 64 on ios)
+    int cubeDataSize = 4 * dimension * dimension * dimension;
+
+    unsigned char cubeDataBytes[cubeDataSize];
+    //will substitute R-channel with red,yellow
+    cubeDataBytes[0] = 0;
+    cubeDataBytes[1] = 0;
+    cubeDataBytes[2] = 0;
+    cubeDataBytes[3] = 0;
+
+    cubeDataBytes[4] = 255;
+    cubeDataBytes[5] = 0;
+    cubeDataBytes[6] = 0;
+    cubeDataBytes[7] = 170;
+
+    cubeDataBytes[8] = 255;
+    cubeDataBytes[9] = 250;
+    cubeDataBytes[10] = 0;
+    cubeDataBytes[11] = 200;
+
+    cubeDataBytes[12] = 255;
+    cubeDataBytes[13] = 255;
+    cubeDataBytes[14] = 255;
+    cubeDataBytes[15] = 255;
+
+    NSData *cube_data = [NSData dataWithBytes:cubeDataBytes length:(cubeDataSize*sizeof(char))];
+
+    //applying gamma filter
+    CIFilter *gammaFilter = [CIFilter filterWithName:@"CIGammaAdjust"];
+    [gammaFilter setValue:inputImage forKey:@"inputImage"];
+    [gammaFilter setValue:@(self.gamma) forKey:@"inputPower"];
+
+    //applying
+    [cubeHeatmapLookupFilter setValue:[gammaFilter outputImage] forKey:@"inputImage"];
+    [cubeHeatmapLookupFilter setValue:cube_data forKey:@"inputCubeData"];
+    [cubeHeatmapLookupFilter setValue:@(dimension) forKey:@"inputCubeDimension"];
+
+    CIImage *outputImage = [cubeHeatmapLookupFilter outputImage];
+
+    CIContext *context = [CIContext contextWithOptions : nil];
+    CGImageRef cgImg = [context createCGImage:outputImage fromRect : [outputImage extent]];
+
+    //setting image
+    [self setImage:[UIImage imageWithCGImage:cgImg]];
+
+    CGImageRelease(cgImg);
+}
+
+
+#pragma mark - private methods
+
+//building height map by placing stencil image one over other to
+//get monochrome red image
 - (UIImage *)drawHeightMapUsingStencil
 {
     UIImage *blobImage = [UIImage imageNamed:@"redDot_06.png"] ;
@@ -69,7 +137,6 @@
         
     }
     
-    // Grab it as an autoreleased image
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     
     UIGraphicsEndImageContext(); // Clean up
@@ -107,8 +174,6 @@
         
     }
     
-    
-    // Grab it as an autoreleased image
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     
     CGGradientRelease(gradient), gradient = NULL;
@@ -119,77 +184,5 @@
 
 
 
--(void)rerenderHeatmap:(NSArray *)pointsArray
-{
-    _pointsArray = pointsArray;
-    
-    CIImage *inputImage;
-
-    if (self.useStencil) {
-        inputImage = [[CIImage alloc] initWithImage:[self drawHeightMapUsingStencil]];
-    }
-    else {
-        inputImage = [[CIImage alloc] initWithImage:[self drawHeightMapUsingGradients]];
-        
-    }
-    
-    // Make tone filter filter
-    // See mentioned link for visual reference
-    
-    CIFilter *cubeHeatmapLookupFilter = [CIFilter filterWithName:@"CIColorCube"];
-    
-    int dimension = 4;  // Must be power of 2, max of 128 (max of 64 on ios)
-    int cubeDataSize = 4 * dimension * dimension * dimension;
-    
-    unsigned char cubeDataBytes[cubeDataSize];
-    
-    cubeDataBytes[0] = 0;
-    cubeDataBytes[1] = 0;
-    cubeDataBytes[2] = 0;
-    cubeDataBytes[3] = 0;
-    
-    cubeDataBytes[4] = 255;  //>150
-    cubeDataBytes[5] = 0;  //4 makes a more realistic effect
-    cubeDataBytes[6] = 0; 
-    cubeDataBytes[7] = 170;//150
-    
-    cubeDataBytes[8] = 255;
-    cubeDataBytes[9] = 250;
-    cubeDataBytes[10] = 0;
-    cubeDataBytes[11] = 200;
-    
-    cubeDataBytes[12] = 255;
-    cubeDataBytes[13] = 255;
-    cubeDataBytes[14] = 255;
-    cubeDataBytes[15] = 255;
-    
-    for (int i = 16; i < cubeDataSize; i += 4)
-    {
-        cubeDataBytes[i] = 0;
-        cubeDataBytes[i+1] = 0;
-        cubeDataBytes[i+2] = 0;
-        cubeDataBytes[i+3] = 0;
-    }
-    
-    NSData *cube_data = [NSData dataWithBytes:cubeDataBytes length:(cubeDataSize*sizeof(char))];
-
-    CIFilter *gammaFilter = [CIFilter filterWithName:@"CIGammaAdjust"];
-    
-    [gammaFilter setValue:inputImage forKey:@"inputImage"];
-    [gammaFilter setValue:[NSNumber numberWithFloat:self.gamma] forKey:@"inputPower"];    
-    
-    [cubeHeatmapLookupFilter setValue:[gammaFilter outputImage] forKey:@"inputImage"];
-    [cubeHeatmapLookupFilter setValue:cube_data forKey:@"inputCubeData"];
-    [cubeHeatmapLookupFilter setValue:[NSNumber numberWithFloat:dimension] forKey:@"inputCubeDimension"];
-    
-    CIImage *outputImage = [cubeHeatmapLookupFilter outputImage];
-    
-    CIContext *context = [CIContext contextWithOptions : nil];
-    CGImageRef cgImg = [context createCGImage:outputImage fromRect : [outputImage extent]];
-    
-    [self setImage:[UIImage imageWithCGImage:cgImg]];
-    
-    CGImageRelease(cgImg);
-}
 
 @end

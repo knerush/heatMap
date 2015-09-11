@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08E902711BA37AFF00C1E11B /* SpashScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E902701BA37AFF00C1E11B /* SpashScreen.xib */; };
 		44AD19F619C6E30E00C64713 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD19F519C6E30E00C64713 /* Foundation.framework */; };
 		44AD19F819C6E30E00C64713 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD19F719C6E30E00C64713 /* CoreGraphics.framework */; };
 		44AD19FA19C6E30E00C64713 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44AD19F919C6E30E00C64713 /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08E902701BA37AFF00C1E11B /* SpashScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SpashScreen.xib; sourceTree = "<group>"; };
 		44AD19F219C6E30E00C64713 /* HeatMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeatMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		44AD19F519C6E30E00C64713 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		44AD19F719C6E30E00C64713 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +171,7 @@
 				44E0BE5819E453350025E41B /* main.m */,
 				44E0BE4A19E453350025E41B /* AppDelegate.h */,
 				44E0BE4B19E453350025E41B /* AppDelegate.m */,
+				08E902701BA37AFF00C1E11B /* SpashScreen.xib */,
 				44E0BE4E19E453350025E41B /* Main_iPhone.storyboard */,
 			);
 			name = "Supporting Files";
@@ -263,6 +266,7 @@
 				44AD1A8E19C6FAE100C64713 /* HeatMapTests-Info.plist in Resources */,
 				44AD1A8D19C6FAE100C64713 /* InfoPlist.strings in Resources */,
 				44E0BE6019E453350025E41B /* InfoPlist.strings in Resources */,
+				08E902711BA37AFF00C1E11B /* SpashScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

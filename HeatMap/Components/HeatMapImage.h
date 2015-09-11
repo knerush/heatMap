@@ -10,11 +10,10 @@
 
 @interface HeatMapImage : UIImageView
 
-@property CGSize resolution;
-@property CGFloat radius;
-@property CGFloat gamma;
-
-@property Boolean useStencil;
+@property(assign, readwrite) CGSize resolution;
+@property(assign, readwrite) CGFloat radius;
+@property(assign, readwrite) CGFloat gamma;
+@property(assign, readwrite) Boolean useStencil;
 
 //array of CGPoints
 -(void) rerenderHeatmap:(NSArray *)pointsArray;
