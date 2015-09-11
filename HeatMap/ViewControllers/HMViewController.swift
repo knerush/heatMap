@@ -22,7 +22,7 @@ class HMViewController : UIViewController {
         heatMap.rerenderHeatmap(model.data)
     }
     
-    // MARK: - private functions
+// MARK: - private functions
 
 //    -(void)configureHeatmapView:(NSArray *)heatmapData
 //    {

@@ -18,7 +18,6 @@
 		44AD1A8E19C6FAE100C64713 /* HeatMapTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 44AD1A8B19C6FAE100C64713 /* HeatMapTests-Info.plist */; };
 		44AD1B1119C6FEE300C64713 /* HeatMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 44AD1B1019C6FEE300C64713 /* HeatMapTests.m */; };
 		44E0BE5C19E453350025E41B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E0BE4B19E453350025E41B /* AppDelegate.m */; };
-		44E0BE5D19E453350025E41B /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E0BE4C19E453350025E41B /* Main_iPad.storyboard */; };
 		44E0BE5E19E453350025E41B /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44E0BE4E19E453350025E41B /* Main_iPhone.storyboard */; };
 		44E0BE5F19E453350025E41B /* HeatMapImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 44E0BE5219E453350025E41B /* HeatMapImage.m */; };
 		44E0BE6019E453350025E41B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 44E0BE5319E453350025E41B /* InfoPlist.strings */; };
@@ -51,7 +50,6 @@
 		44AD1B1019C6FEE300C64713 /* HeatMapTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatMapTests.m; sourceTree = "<group>"; };
 		44E0BE4A19E453350025E41B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		44E0BE4B19E453350025E41B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		44E0BE4D19E453350025E41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		44E0BE4F19E453350025E41B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		44E0BE5119E453350025E41B /* HeatMapImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeatMapImage.h; sourceTree = "<group>"; };
 		44E0BE5219E453350025E41B /* HeatMapImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeatMapImage.m; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				44E0BE5819E453350025E41B /* main.m */,
 				44E0BE4A19E453350025E41B /* AppDelegate.h */,
 				44E0BE4B19E453350025E41B /* AppDelegate.m */,
-				44E0BE4C19E453350025E41B /* Main_iPad.storyboard */,
 				44E0BE4E19E453350025E41B /* Main_iPhone.storyboard */,
 			);
 			name = "Supporting Files";
@@ -262,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				44E0BE5E19E453350025E41B /* Main_iPhone.storyboard in Resources */,
-				44E0BE5D19E453350025E41B /* Main_iPad.storyboard in Resources */,
 				44E0BE6219E453350025E41B /* Images.xcassets in Resources */,
 				44AD1A8E19C6FAE100C64713 /* HeatMapTests-Info.plist in Resources */,
 				44AD1A8D19C6FAE100C64713 /* InfoPlist.strings in Resources */,
@@ -317,14 +313,6 @@
 				44AD1A8A19C6FAE100C64713 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		44E0BE4C19E453350025E41B /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				44E0BE4D19E453350025E41B /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		44E0BE4E19E453350025E41B /* Main_iPhone.storyboard */ = {
@@ -434,6 +422,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HeatMap/ViewControllers/HeatMap-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -451,6 +440,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "HeatMap/ViewControllers/HeatMap-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
