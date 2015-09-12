@@ -22,7 +22,7 @@
     if (self) {
         self.frame = initFrame;
         
-        self.resolution =  initFrame.size;
+        self.resolution = initFrame.size;
         self.useStencil = YES;
         self.radius = 0.05;
         self.gamma = 2.5;
@@ -36,7 +36,7 @@
     self = [super initWithCoder:decoder];
     
     if (self){
-        self.resolution = CGSizeMake(400, 600);
+        self.resolution =  CGSizeMake(400, 600);
         self.radius = 0.02;
         self.gamma = 1.0;
     }
@@ -62,30 +62,19 @@
 
     CIFilter *cubeHeatmapLookupFilter = [CIFilter filterWithName:@"CIColorCube"];
 
-    int dimension = 4;  // Must be power of 2, max of 128 (max of 64 on ios)
-    int cubeDataSize = 4 * dimension * dimension * dimension;
+    int resolution = 4;  // Must be power of 2, max of 128 (max of 64 on ios)
+    int cubeDataSize = 4 * resolution * resolution * resolution;
 
-    unsigned char cubeDataBytes[cubeDataSize];
-    //will substitute R-channel with red,yellow
-    cubeDataBytes[0] = 0;
-    cubeDataBytes[1] = 0;
-    cubeDataBytes[2] = 0;
-    cubeDataBytes[3] = 0;
-
-    cubeDataBytes[4] = 255;
-    cubeDataBytes[5] = 0;
-    cubeDataBytes[6] = 0;
-    cubeDataBytes[7] = 170;
-
-    cubeDataBytes[8] = 255;
-    cubeDataBytes[9] = 250;
-    cubeDataBytes[10] = 0;
-    cubeDataBytes[11] = 200;
-
-    cubeDataBytes[12] = 255;
-    cubeDataBytes[13] = 255;
-    cubeDataBytes[14] = 255;
-    cubeDataBytes[15] = 255;
+    //cubeDataBytes[cubeDataSize]
+    unsigned char cubeDataBytes[4*4*4*4] = {
+        0,      0,      0,      0,
+        255,    0,      0,      170,
+        255,    250,    0,      200,
+        255,    255,    255,    255
+    };
+    //zeros can be omitted only need mapping values for 1 vector
+    //will substitute black with fully transparent,
+    //red-black with gradation of yellow and red, opaque red with white
 
     NSData *cube_data = [NSData dataWithBytes:cubeDataBytes length:(cubeDataSize*sizeof(char))];
 
@@ -97,7 +86,7 @@
     //applying
     [cubeHeatmapLookupFilter setValue:[gammaFilter outputImage] forKey:@"inputImage"];
     [cubeHeatmapLookupFilter setValue:cube_data forKey:@"inputCubeData"];
-    [cubeHeatmapLookupFilter setValue:@(dimension) forKey:@"inputCubeDimension"];
+    [cubeHeatmapLookupFilter setValue:@(resolution) forKey:@"inputCubeDimension"];
 
     CIImage *outputImage = [cubeHeatmapLookupFilter outputImage];
 
@@ -114,7 +103,7 @@
 #pragma mark - private methods
 
 //building height map by placing stencil image one over other to
-//get monochrome red image
+//get black and red image, so B&G channels are 0
 - (UIImage *)drawHeightMapUsingStencil
 {
     UIImage *blobImage = [UIImage imageNamed:@"redDot_06.png"] ;
